@@ -16,7 +16,7 @@ class _WeatherPageState extends State<WeatherPage> {
   _fetchWeather() async {
     try {
       String cityName = await _weatherService.getCurrentCity();
-      print("🔍 Город по геолокации: $cityName");
+      print("Город по геолокации: $cityName");
 
       final weather = await _weatherService.getWeather(cityName);
       setState(() {
